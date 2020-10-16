@@ -1,8 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "commpents/navbar/navbar"
+    "pages/logs/logs"
   ],
   "tabBar": {
     "list": [{

@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import navbar from '../../commpents/navbar/navbar'
 Page({
  handleHideToast(e){
   wx.hideLoading({
@@ -55,7 +54,6 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    navbar,
     myName:app.globalData.myName,
     buttonDisabled:false,
     checkValue:''
@@ -63,9 +61,9 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     
-    wx.navigateTo({
-      url: '../../commpents/navbar/navbar'
-    })
+    // wx.navigateTo({
+    //   url: '../../commpents/navbar/navbar'
+    // })
   },
   onShow:function(){
     console.log('1')
