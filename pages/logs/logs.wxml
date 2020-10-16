@@ -1,0 +1,7 @@
+<!--logs.wxml-->
+<view class="container log-list" style="margin-top:100px;">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <icon class="arrow-left"></icon>
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>

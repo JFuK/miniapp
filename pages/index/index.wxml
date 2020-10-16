@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname" bindtap="bindViewTap">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <input model:value="{{motto}}" style="margin:50px;"/>
+
+    <text class="user-motto">{{motto}}</text>
+        <text class="user-motto">{{motto}}</text>
+
+  </view>
+  <icon wx:if="{{myName=='JK'}}" type="success" size="70"></icon>
+  <canvas type="2d" id="myCanvas"></canvas>
+  <button type="primary" size="mini" form-type="submit" bindtap="handleButtonClick" disabled="{{buttonDisabled}}">测试</button>
+  <button bindtap="handleTriggerDis">切换按钮可用性</button>
+  <checkbox-group bindchange="handleCheck">
+    <checkbox color="red" value="1" >测试</checkbox>
+    <checkbox color="red" value="2" >测试</checkbox>
+    <checkbox color="red" value="3" >测试</checkbox>
+    <checkbox color="red" value="4" >测试</checkbox>
+  </checkbox-group>
+</view>
+
